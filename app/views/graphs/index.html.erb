@@ -5,7 +5,13 @@
 
 <script type="text/javascript">
   window.onload = function () {
-    var r = Raphael("pie");
-    r.piechart(320, 240, 150, <%= @numbers %>);
+    $.ajax({
+        url: "./graphs.json",
+        dataType: 'json',
+        success: function(data, textStatus, xhr) {
+          var r = Raphael("pie");
+          r.piechart(320, 240, 150, data);
+        }
+    });
   }
 </script>

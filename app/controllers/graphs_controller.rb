@@ -4,7 +4,7 @@ class GraphsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @graphs }
+      format.json { render json: @numbers }
     end
   end
 end
