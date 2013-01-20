@@ -6,6 +6,6 @@
 <script type="text/javascript">
   window.onload = function () {
     var r = Raphael("pie");
-    r.piechart(320, 240, 150, [55, 20, 13, 32, 5, 1, 2, 10]);
+    r.piechart(320, 240, 150, <%= @numbers %>);
   }
 </script>
